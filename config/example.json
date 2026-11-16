@@ -1,0 +1,42 @@
+{
+  "common": {
+    "tarball_dir": "tarballs",
+    "root_dir": "work/root.x86_64",
+    "select": "auto",
+    "verification": "signature",
+    "keyring": "/usr/share/pacman/keyrings/archlinux.gpg"
+  },
+  "run": {
+    "steps": ["fetch", "extract", "configure"],
+    "with_iso": false,
+    "with_wsl": false
+  },
+  "configure": {
+    "mirror": "https://geo.mirror.pkgbuild.com/$repo/os/$arch",
+    "packages": ["base", "sudo", "neovim"],
+    "hostname": "arch-bootstrap",
+    "timezone": "Europe/Copenhagen",
+    "locale": "en_US.UTF-8",
+    "username": "",
+    "services": [],
+    "wsl": false
+  },
+  "wsl-export": {
+    "wsl_output": "out/archlinux-wsl.tar"
+  },
+  "iso": {
+    "iso_profile": "/usr/share/archiso/configs/releng",
+    "iso_packages": ["git", "neovim"],
+    "iso_include_tarball": false,
+    "iso_label": "ARCH_BOOTSTRAP",
+    "iso_name": "archlinux-custom"
+  },
+  "append-data": {
+    "input_iso": "",
+    "data_image": "out/archlinux-data.ext4",
+    "output_image": "out/archlinux-with-data.img",
+    "data_size": "1G",
+    "data_label": "ARCH_DATA",
+    "partition_number": 3
+  }
+}

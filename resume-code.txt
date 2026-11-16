@@ -1,0 +1,5 @@
+❯ codex --ask-for-approval never                                                                                             Disconnected from this task. Any running work continues.
+To reconnect, run:
+  codex resume 01a1e3ce-8d6a-7f21-a121-d67cb3629739
+Stop the current turn: run codex agents, select this task, and press x.
+Token usage so far: total=135.213 input=101.117 (+ 3.289.344 cached) output=34.096 (reasoning 8.608)

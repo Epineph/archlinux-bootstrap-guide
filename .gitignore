@@ -1,0 +1,23 @@
+# Downloaded archives and verification sidecars are local artifacts.
+/tarballs/*
+!/tarballs/README.md
+*.tar
+*.tar.gz
+*.tar.zst
+*.tar.xz
+*.iso
+*.img
+*.ext4
+*.sig
+*.part
+
+# Extracted roots, build trees, exports, and private configuration.
+/work/
+/out/
+/keys/
+/config/local*.json
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
